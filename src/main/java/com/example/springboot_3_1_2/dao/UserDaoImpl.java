@@ -10,7 +10,6 @@ import java.util.List;
 
 
 @Repository
-@Transactional
 public class UserDaoImpl implements UserDao{
 
     @PersistenceContext
@@ -42,6 +41,4 @@ public class UserDaoImpl implements UserDao{
     public void deleteUser(int id) {
         entityManager.remove(getUserById(id));
     }
-
-
 }
